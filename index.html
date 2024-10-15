@@ -1,18 +1,1202 @@
 <!doctype html>
+<!-- ✨ Built with Framer • https://www.framer.com/ -->
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
 
     <!-- Start of headStart -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        #container netflixintro {
+            display: block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            animation-name: zoom-in;
+            animation-delay: 0.5s;
+            animation-duration: 3.5s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            background-size: 4000px;
+            background-position: -1950px 0;
+        }
+
+        #container netflixintro::before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-color: #000000;
+            width: 150%;
+            height: 30%;
+            left: -25%;
+            bottom: -27%;
+            border-radius: 50%;
+            z-index: 5;
+            transform-origin: left center;
+            background-size: 4000px;
+            background-position: -1950px 0;
+        }
+
+        #container netflixintro[letter=N] {
+            transform-origin: 30% center;
+        }
+
+        #container netflixintro[letter=N] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 22.4%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=N] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+        }
+
+        #container netflixintro[letter=N] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=N] .helper-3 {
+            width: 19%;
+            height: 150%;
+            left: 40.5%;
+            top: -25%;
+            transform: rotate(-19.5deg);
+            box-shadow: 0px 0px 35px -12px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=N] .helper-3 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.8s;
+        }
+
+        #container netflixintro[letter=N] .helper-2 {
+            width: 19.5%;
+            height: 100%;
+            left: 57.8%;
+            top: 0;
+            transform: rotate(180deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=N] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+
+        #container netflixintro[letter=E] {
+            transform-origin: 30% center;
+        }
+
+        #container netflixintro[letter=E] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 22%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=E] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+        }
+
+        #container netflixintro[letter=E] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=E] .helper-2 {
+            width: 17.5%;
+            height: 50%;
+            left: 38%;
+            top: -49px;
+            transform: rotate(270deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=E] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.8s;
+        }
+
+        #container netflixintro[letter=E] .helper-3 {
+            width: 17%;
+            height: 39%;
+            left: 33%;
+            top: 29%;
+            transform: rotate(-90deg);
+            box-shadow: 0px 0px 35px -12px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            animation-name: fading-out;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        #container netflixintro[letter=E] .helper-3 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.6s;
+        }
+
+        #container netflixintro[letter=E] .helper-4 {
+            width: 17.5%;
+            height: 50%;
+            left: 38%;
+            top: 196px;
+            transform: rotate(270deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=E] .helper-4 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.4s;
+            animation-delay: 0.5s;
+        }
+
+        #container netflixintro[letter=T] {
+            transform-origin: center center;
+        }
+
+        #container netflixintro[letter=T] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 38%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=T] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        #container netflixintro[letter=T] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=T] .helper-2 {
+            width: 17.5%;
+            height: 54%;
+            left: 39%;
+            top: -55px;
+            transform: rotate(270deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=T] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+
+        #container netflixintro[letter=F] {
+            transform-origin: 30% center;
+        }
+
+        #container netflixintro[letter=F] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 22%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=F] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+        }
+
+        #container netflixintro[letter=F] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=F] .helper-2 {
+            width: 17.5%;
+            height: 50%;
+            left: 38%;
+            top: -49px;
+            transform: rotate(270deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=F] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.7s;
+        }
+
+        #container netflixintro[letter=F] .helper-3 {
+            width: 17%;
+            height: 39%;
+            left: 33%;
+            top: 29%;
+            transform: rotate(-90deg);
+            box-shadow: 0px 0px 35px -12px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            animation-name: fading-out;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        #container netflixintro[letter=F] .helper-3 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+
+        #container netflixintro[letter=L] {
+            transform-origin: 30% center;
+        }
+
+        #container netflixintro[letter=L] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 22%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=L] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.8s;
+        }
+
+        #container netflixintro[letter=L] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=L] .helper-2 {
+            width: 17.5%;
+            height: 50%;
+            left: 38%;
+            top: 196px;
+            transform: rotate(270deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=L] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.4s;
+        }
+
+        #container netflixintro[letter=I] {
+            transform-origin: center center;
+        }
+
+        #container netflixintro[letter=I] .helper-1 {
+            width: 19.5%;
+            height: 100%;
+            background-color: rgba(228, 9, 19, 0.5);
+            left: 38%;
+            top: 0;
+            transform: rotate(180deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=I] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        #container netflixintro[letter=I] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=X] {
+            transform-origin: center center;
+        }
+
+        #container netflixintro[letter=X] .helper-1 {
+            width: 19%;
+            height: 150%;
+            left: 40.5%;
+            top: -25%;
+            transform: rotate(-19.5deg);
+            animation-name: fading-lumieres-box;
+            animation-duration: 2s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro[letter=X] .helper-1 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2.5s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+        }
+
+        #container netflixintro[letter=X] .helper-1 .effect-brush [class*=fur-] {
+            bottom: 0;
+            height: 40%;
+        }
+
+        #container netflixintro[letter=X] .helper-2 {
+            width: 19%;
+            height: 150%;
+            left: 40.5%;
+            top: -25%;
+            transform: rotate(19.5deg);
+            overflow: hidden;
+        }
+
+        #container netflixintro[letter=X] .helper-2 .effect-brush {
+            animation-name: brush-moving;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+
+        #container netflixintro [class*=helper-] {
+            position: absolute;
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush {
+            position: absolute;
+            width: 100%;
+            height: 300%;
+            top: 0;
+            overflow: hidden;
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush::before {
+            display: block;
+            content: "";
+            position: absolute;
+            background-color: #e40913;
+            width: 100%;
+            height: 70%;
+            box-shadow: 0px 0px 29px 24px #e40913;
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush [class*=fur-] {
+            display: block;
+            position: absolute;
+            bottom: 10%;
+            height: 30%;
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-1 {
+            left: 0%;
+            width: 3.8%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 15%, rgba(0, 0, 0, 0) 81%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-2 {
+            left: 3.8%;
+            width: 2.8%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 10%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-3 {
+            left: 6.6%;
+            width: 4.8%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 37%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-4 {
+            left: 11.4%;
+            width: 4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 23%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-5 {
+            left: 15.4%;
+            width: 4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 15%, rgba(0, 0, 0, 0) 86%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-6 {
+            left: 19.4%;
+            width: 2.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 27%, rgba(0, 0, 0, 0) 89%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-7 {
+            left: 21.9%;
+            width: 4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 20%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-8 {
+            left: 25.9%;
+            width: 2%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 30%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-9 {
+            left: 27.9%;
+            width: 4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 35%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-10 {
+            left: 31.9%;
+            width: 3.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 39%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-11 {
+            left: 35.4%;
+            width: 2%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 34%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-12 {
+            left: 37.4%;
+            width: 2.6%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 22%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-13 {
+            left: 40%;
+            width: 6%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 47%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-14 {
+            left: 46%;
+            width: 2%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 36%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-15 {
+            left: 48%;
+            width: 5.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 29%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-16 {
+            left: 53.5%;
+            width: 3%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 39%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-17 {
+            left: 56.5%;
+            width: 4.1%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 45%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-18 {
+            left: 60.6%;
+            width: 2.4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 34%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-19 {
+            left: 63%;
+            width: 4%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 47%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-20 {
+            left: 67%;
+            width: 1.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 27%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-21 {
+            left: 68.5%;
+            width: 2.8%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 37%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-22 {
+            left: 71.3%;
+            width: 2.3%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 9%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-23 {
+            left: 73.6%;
+            width: 2.2%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 28%, rgba(0, 0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-24 {
+            left: 75.8%;
+            width: 1%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 37%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-25 {
+            left: 76.8%;
+            width: 2.1%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 28%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-26 {
+            left: 78.9%;
+            width: 4.1%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 34%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-27 {
+            left: 83%;
+            width: 2.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 21%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-28 {
+            left: 85.5%;
+            width: 4.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 39%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-29 {
+            left: 90%;
+            width: 2.8%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 30%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-30 {
+            left: 92.8%;
+            width: 3.5%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 19%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-brush .fur-31 {
+            left: 96.3%;
+            width: 3.7%;
+            background: linear-gradient(to bottom, #e40913 0%, #e40913 37%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation-name: showing-lumieres;
+            animation-duration: 2s;
+            animation-delay: 1.6s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres [class*=lamp-] {
+            position: absolute;
+            display: block;
+            height: 100%;
+            box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+            background: var(--color);
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres [class*=lamp-]::before {
+            position: absolute;
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: var(--color);
+            box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-1 {
+            --color: #ff0100;
+            z: 6;
+            left: 0.7%;
+            width: 1%;
+            animation-delay: 0.48s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-1::before {
+            left: 172%;
+            animation-delay: 0.26s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-2 {
+            --color: #ffde01;
+            left: 2.2%;
+            width: 1.4%;
+            animation-delay: 0.91s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-2::before {
+            left: 145%;
+            animation-delay: 0.38s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-3 {
+            --color: #ff00cc;
+            left: 5.8%;
+            width: 2.1%;
+            animation-delay: 0.21s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-3::before {
+            left: 136%;
+            animation-delay: 1.35s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-4 {
+            --color: #04fd8f;
+            left: 10.1%;
+            width: 2%;
+            animation-delay: 1.31s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-4::before {
+            left: 37%;
+            animation-delay: 0.41s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-5 {
+            --color: #ff0100;
+            left: 12.9%;
+            width: 1.4%;
+            animation-delay: 1.13s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-5::before {
+            left: 124%;
+            animation-delay: 1.23s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-6 {
+            --color: #ff9600;
+            left: 15.3%;
+            width: 2.8%;
+            animation-delay: 0.83s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-6::before {
+            left: 194%;
+            animation-delay: 0.88s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-7 {
+            --color: #0084ff;
+            left: 21.2%;
+            width: 2.5%;
+            animation-delay: 1.63s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-7::before {
+            left: 1%;
+            animation-delay: 0.54s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-8 {
+            --color: #f84006;
+            left: 25%;
+            width: 2.5%;
+            animation-delay: 1.88s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-8::before {
+            left: 200%;
+            animation-delay: 0.39s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-9 {
+            --color: #ffc601;
+            left: 30.5%;
+            width: 3%;
+            animation-delay: 1.44s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-9::before {
+            left: 32%;
+            animation-delay: 1.17s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-10 {
+            --color: #ff4800;
+            left: 36.3%;
+            width: 3%;
+            animation-delay: 1.88s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-10::before {
+            left: 111%;
+            animation-delay: 1.51s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-11 {
+            --color: #fd0100;
+            left: 41%;
+            width: 2.2%;
+            animation-delay: 1.94s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-11::before {
+            left: 65%;
+            animation-delay: 1.09s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-12 {
+            --color: #01ffff;
+            left: 44.2%;
+            width: 2.6%;
+            animation-delay: 0.52s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-12::before {
+            left: 86%;
+            animation-delay: 1.69s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-13 {
+            --color: #ffc601;
+            left: 51.7%;
+            width: 0.5%;
+            animation-delay: 0.19s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-13::before {
+            left: 29%;
+            animation-delay: 1.65s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-14 {
+            --color: #ffc601;
+            left: 52.1%;
+            width: 1.8%;
+            animation-delay: 1.46s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-14::before {
+            left: 131%;
+            animation-delay: 0.03s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-15 {
+            --color: #0078fe;
+            left: 53.8%;
+            width: 2.3%;
+            animation-delay: 1.89s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-15::before {
+            left: 145%;
+            animation-delay: 0.05s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-16 {
+            --color: #0080ff;
+            left: 57.2%;
+            width: 2%;
+            animation-delay: 1.24s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-16::before {
+            left: 152%;
+            animation-delay: 1.06s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-17 {
+            --color: #ffae01;
+            left: 62.3%;
+            width: 2.9%;
+            animation-delay: 1.42s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-17::before {
+            left: 56%;
+            animation-delay: 1.99s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-18 {
+            --color: #ff00bf;
+            left: 65.8%;
+            width: 1.7%;
+            animation-delay: 0.08s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-18::before {
+            left: 175%;
+            animation-delay: 0.7s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-19 {
+            --color: #a601f4;
+            left: 72.8%;
+            width: 0.8%;
+            animation-delay: 1.23s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-19::before {
+            left: 114%;
+            animation-delay: 0.86s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-20 {
+            --color: #f30b34;
+            left: 74.3%;
+            width: 2%;
+            animation-delay: 1.41s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-20::before {
+            left: 193%;
+            animation-delay: 1.17s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-21 {
+            --color: #ff00bf;
+            left: 79.8%;
+            width: 2%;
+            animation-delay: 1.08s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-21::before {
+            left: 110%;
+            animation-delay: 1.8s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-22 {
+            --color: #04fd8f;
+            left: 78.2%;
+            width: 2%;
+            animation-delay: 0.56s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-22::before {
+            left: 51%;
+            animation-delay: 1.68s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-23 {
+            --color: #01ffff;
+            left: 78.5%;
+            width: 2%;
+            animation-delay: 0.87s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-23::before {
+            left: 77%;
+            animation-delay: 1.24s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-24 {
+            --color: #a201ff;
+            left: 85.3%;
+            width: 1.1%;
+            animation-delay: 1.58s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-24::before {
+            left: 125%;
+            animation-delay: 0.04s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-25 {
+            --color: #ec0014;
+            left: 86.9%;
+            width: 1.1%;
+            animation-delay: 1.02s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-25::before {
+            left: 68%;
+            animation-delay: 0.99s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-26 {
+            --color: #0078fe;
+            left: 88.8%;
+            width: 2%;
+            animation-delay: 1.98s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-26::before {
+            left: 137%;
+            animation-delay: 1.97s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-27 {
+            --color: #ff0036;
+            left: 92.4%;
+            width: 2.4%;
+            animation-delay: 0.54s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-27::before {
+            left: 56%;
+            animation-delay: 1.1s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-28 {
+            --color: #06f98c;
+            left: 96.2%;
+            width: 2.1%;
+            animation-delay: 0.75s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-28::before {
+            left: 173%;
+            animation-delay: 0.24s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-1,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-3,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-5,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-7,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-9,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-11,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-13,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-15,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-17,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-19,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-21,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-23,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-25,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-27 {
+            animation-name: lumieres-moving-left;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-1::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-3::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-5::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-7::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-9::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-11::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-13::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-15::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-17::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-19::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-21::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-23::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-25::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-27::before {
+            animation-name: lumieres-moving-left;
+            animation-duration: 5.5s;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-2,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-4,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-6,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-8,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-10,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-12,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-14,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-16,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-18,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-20,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-22,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-24,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-26,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-28 {
+            animation-name: lumieres-moving-right;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-2::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-4::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-6::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-8::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-10::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-12::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-14::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-16::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-18::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-20::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-22::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-24::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-26::before,
+        #container netflixintro [class*=helper-] .effect-lumieres .lamp-28::before {
+            animation-name: lumieres-moving-right;
+            animation-duration: 5.5s;
+        }
+
+        @keyframes brush-moving {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes fading-out {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes lumieres-moving-right {
+            0% {
+                transform: translate(0);
+            }
+            40% {
+                transform: translate(-10px) scaleX(1);
+            }
+            50% {
+                transform: translate(-60px);
+            }
+            100% {
+                transform: translate(-120px) scaleX(3);
+            }
+        }
+
+        @keyframes lumieres-moving-left {
+            0% {
+                transform: translate(0);
+            }
+            40% {
+                transform: translate(10px) scaleX(1);
+            }
+            50% {
+                transform: translate(60px);
+            }
+            100% {
+                transform: translate(120px) scaleX(3);
+            }
+        }
+
+        @keyframes zoom-in {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(15);
+            }
+        }
+
+        @keyframes showing-lumieres {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fading-lumieres-box {
+            0% {
+                background-color: rgba(228, 9, 19, 0.5);
+            }
+            100% {
+                background-color: rgba(228, 9, 19, 0);
+            }
+        }
+
+        /* Ensure the loading animation covers the full viewport */
+
+        #container {
+            position: fixed;
+            /* Fixed positioning to cover the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            /* Background color of the loading animation */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* High z-index to ensure it sits on top of other content */
+            opacity: 1;
+            transition: background-color 1s, opacity 1s;
+            /* Smooth fade-out transition for background color */
+        }
+
+        /* Ensure the main content is visible by default */
+
+        #main {
+            display: block;
+        }
+    </style>
     <!-- End of headStart -->
     <meta name="viewport" content="width=1400">
-    <meta name="generator" content="Framer 2c4b293">
+    <meta name="generator" content="Framer 99bc0fd">
     <title>TEDx Charusat</title>
     <meta name="description" content="TEDx Charusat Event">
-    <meta name="framer-search-index" content="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/searchIndex-4mRcn2PvV_HW.json">
-    <link rel="icon" href="https://framerusercontent.com/images/mjdpZMTGZK2UtKgsDuLoCo0xA8w.png">
+    <meta name="framer-search-index" content="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/searchIndex-NcqIVI1rIzG6.json">
+    <link href="https://framerusercontent.com/images/mjdpZMTGZK2UtKgsDuLoCo0xA8w.png" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="https://framerusercontent.com/images/mjdpZMTGZK2UtKgsDuLoCo0xA8w.png" rel="icon" media="(prefers-color-scheme: dark)">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="TEDx Charusat">
@@ -37,18 +1221,18 @@
     </script>
 
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link rel="stylesheet" href="style.css">
+
     <meta name="robots" content="max-image-preview:large">
     <link rel="canonical" href="https://tedx-charusat.framer.website/">
     <meta property="og:url" content="https://tedx-charusat.framer.website/">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-RDTMO55M.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-ELYU6EKT.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/lscXGRZ7yCLF_NshfUs0JbK_3WRSpe2pR47hv30djLc.HLPSX3I5.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-LJXH7RVH.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-QUQ7RO6S.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-SOHJE322.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-RIUMFBNJ.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/yiHiSVbLTp8DAgQIv7OyK8itdr0ksqb-MSmd_Xnbm8g.WRFWNR3D.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-NEUHL3HT.mjs">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-PANTRFHO.mjs">
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/chunk-42U43NKG.mjs">
-    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/script_main.FJ263S6G.mjs">
-    <style data-framer-css-ssr-minified data-framer-components="framer-qPhhA">
+    <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/script_main.JYQ7U26R.mjs">
+    <style data-framer-css-ssr-minified data-framer-components="framer-E9c4t">
         html,
         body,
         #main {
@@ -85,6 +1269,21 @@
         button {
             font-size: 12px;
             font-family: sans-serif
+        }
+
+        #__framer-badge-container {
+            position: fixed;
+            bottom: 0;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            pointer-events: none;
+            z-index: 314159
+        }
+
+        .__framer-badge {
+            pointer-events: auto
         }
 
         @font-face {
@@ -288,10 +1487,10 @@
         @font-face {
             font-family: Inter Placeholder;
             src: local("Arial");
-            ascent-override: 90%;
-            descent-override: 22.43%;
+            ascent-override: 89.79%;
+            descent-override: 22.36%;
             line-gap-override: 0%;
-            size-adjust: 107.64%
+            size-adjust: 107.89%
         }
 
         body {
@@ -1043,16 +2242,16 @@
             }
         }
 
-        .framer-body-augiA20Il-framer-qPhhA {
+        .framer-body-augiA20Il-framer-E9c4t {
             background: rgb(0, 0, 0)
         }
 
-        .framer-qPhhA.framer-lux5qc,
-        .framer-qPhhA .framer-lux5qc {
+        .framer-E9c4t.framer-lux5qc,
+        .framer-E9c4t .framer-lux5qc {
             display: block
         }
 
-        .framer-qPhhA.framer-72rtr7 {
+        .framer-E9c4t.framer-72rtr7 {
             align-content: center;
             align-items: center;
             background-color: #000;
@@ -1068,7 +2267,7 @@
             width: 1400px
         }
 
-        .framer-qPhhA .framer-s48gip {
+        .framer-E9c4t .framer-s48gip {
             background-color: #000;
             flex: none;
             height: 2479px;
@@ -1077,7 +2276,7 @@
             width: 100%
         }
 
-        .framer-qPhhA .framer-v9kcid {
+        .framer-E9c4t .framer-v9kcid {
             background-color: #000;
             flex: none;
             height: 1160px;
@@ -1087,7 +2286,7 @@
             top: 0
         }
 
-        .framer-qPhhA .framer-16336j9 {
+        .framer-E9c4t .framer-16336j9 {
             flex: none;
             height: 1850px;
             left: calc(48.55739717618172% - 2712px / 2);
@@ -1096,7 +2295,7 @@
             width: 2712px
         }
 
-        .framer-qPhhA .framer-rkm4ed {
+        .framer-E9c4t .framer-rkm4ed {
             flex: none;
             height: 10%;
             left: calc(42.97114794352366% - 49.78514426028238% / 2);
@@ -1105,7 +2304,7 @@
             width: 50%
         }
 
-        .framer-qPhhA .framer-1lpriuj {
+        .framer-E9c4t .framer-1lpriuj {
             align-content: flex-end;
             align-items: flex-end;
             display: flex;
@@ -1124,7 +2323,7 @@
             width: 82%
         }
 
-        .framer-qPhhA .framer-1jc4itk {
+        .framer-E9c4t .framer-1jc4itk {
             align-content: center;
             align-items: center;
             bottom: 0;
@@ -1142,7 +2341,7 @@
             z-index: 1
         }
 
-        .framer-qPhhA .framer-m9l3hl {
+        .framer-E9c4t .framer-m9l3hl {
             aspect-ratio: 6.185185185185185 / 1;
             flex: none;
             height: var(--framer-aspect-ratio-supported, 54px);
@@ -1151,7 +2350,7 @@
             width: 334px
         }
 
-        .framer-qPhhA .framer-bf6xrg {
+        .framer-E9c4t .framer-bf6xrg {
             align-content: center;
             align-items: center;
             display: flex;
@@ -1167,17 +2366,18 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1v6o7fb,
-        .framer-qPhhA .framer-12bliwu,
-        .framer-qPhhA .framer-1db166z,
-        .framer-qPhhA .framer-1e5f7im,
-        .framer-qPhhA .framer-i1z1f2,
-        .framer-qPhhA .framer-13f3t9s,
-        .framer-qPhhA .framer-l3huep,
-        .framer-qPhhA .framer-4tipr5,
-        .framer-qPhhA .framer-1oj5mrb,
-        .framer-qPhhA .framer-1e1jzpy,
-        .framer-qPhhA .framer-160c33e {
+        .framer-E9c4t .framer-1v6o7fb,
+        .framer-E9c4t .framer-12bliwu,
+        .framer-E9c4t .framer-1db166z,
+        .framer-E9c4t .framer-1e5f7im,
+        .framer-E9c4t .framer-i1z1f2,
+        .framer-E9c4t .framer-13f3t9s,
+        .framer-E9c4t .framer-l3huep,
+        .framer-E9c4t .framer-4tipr5,
+        .framer-E9c4t .framer-1oj5mrb,
+        .framer-E9c4t .framer-1e1jzpy,
+        .framer-E9c4t .framer-160c33e,
+        .framer-E9c4t .framer-q5xsrt {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1186,7 +2386,7 @@
             width: auto
         }
 
-        .framer-qPhhA .framer-186zabs {
+        .framer-E9c4t .framer-186zabs {
             align-content: center;
             align-items: center;
             background-color: #eb0028;
@@ -1205,7 +2405,7 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1vrnqbo {
+        .framer-E9c4t .framer-1vrnqbo {
             aspect-ratio: 1.1009132420091323 / 1;
             flex: none;
             height: var(--framer-aspect-ratio-supported, 2190px);
@@ -1216,7 +2416,7 @@
             width: 2411px
         }
 
-        .framer-qPhhA .framer-koum1s {
+        .framer-E9c4t .framer-koum1s {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1230,7 +2430,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-1gejnlh {
+        .framer-E9c4t .framer-1gejnlh {
             align-content: flex-start;
             align-items: flex-start;
             bottom: 351px;
@@ -1250,7 +2450,7 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-11oli2u {
+        .framer-E9c4t .framer-11oli2u {
             --framer-paragraph-spacing: 0px;
             bottom: -56px;
             flex: none;
@@ -1262,7 +2462,7 @@
             z-index: 1
         }
 
-        .framer-qPhhA .framer-18b933y {
+        .framer-E9c4t .framer-18b933y {
             bottom: -80px;
             flex: none;
             height: 24px;
@@ -1272,7 +2472,7 @@
             z-index: 1
         }
 
-        .framer-qPhhA .framer-w9kl8v-container {
+        .framer-E9c4t .framer-w9kl8v-container {
             bottom: 455px;
             flex: none;
             height: auto;
@@ -1282,7 +2482,7 @@
             width: auto
         }
 
-        .framer-qPhhA .framer-w8nw9d {
+        .framer-E9c4t .framer-w8nw9d {
             --framer-paragraph-spacing: 0px;
             bottom: 178px;
             flex: none;
@@ -1294,7 +2494,7 @@
             width: auto
         }
 
-        .framer-qPhhA .framer-pt33d3 {
+        .framer-E9c4t .framer-pt33d3 {
             align-content: center;
             align-items: center;
             background-color: #eb0028;
@@ -1316,7 +2516,7 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1e2ozq3 {
+        .framer-E9c4t .framer-1e2ozq3 {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1330,7 +2530,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-1h6ri1v {
+        .framer-E9c4t .framer-1h6ri1v {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1349,7 +2549,7 @@
             width: 1354px
         }
 
-        .framer-qPhhA .framer-1nj7ywx {
+        .framer-E9c4t .framer-1nj7ywx {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1365,14 +2565,14 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1ofqk1v {
+        .framer-E9c4t .framer-1ofqk1v {
             flex: none;
             height: 24px;
             position: relative;
             width: 186px
         }
 
-        .framer-qPhhA .framer-dlk9b0 {
+        .framer-E9c4t .framer-dlk9b0 {
             align-content: center;
             align-items: center;
             display: flex;
@@ -1388,16 +2588,16 @@
             width: 1354px
         }
 
-        .framer-qPhhA .framer-8lwjqz-container {
+        .framer-E9c4t .framer-8lwjqz-container {
             flex: none;
             height: 540px;
             position: relative;
             width: 1354px
         }
 
-        .framer-qPhhA .framer-10w8ri9,
-        .framer-qPhhA .framer-1la7ery,
-        .framer-qPhhA .framer-1iuoj5h {
+        .framer-E9c4t .framer-10w8ri9,
+        .framer-E9c4t .framer-1la7ery,
+        .framer-E9c4t .framer-1iuoj5h {
             align-content: flex-start;
             align-items: flex-start;
             background: linear-gradient(0deg, #730909 0%, rgb(0, 0, 0) 47%);
@@ -1415,10 +2615,10 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-12rd2aw,
-        .framer-qPhhA .framer-11xvzci,
-        .framer-qPhhA .framer-1ohhlpu,
-        .framer-qPhhA .framer-1igkeye {
+        .framer-E9c4t .framer-12rd2aw,
+        .framer-E9c4t .framer-11xvzci,
+        .framer-E9c4t .framer-1ohhlpu,
+        .framer-E9c4t .framer-1igkeye {
             aspect-ratio: 1 / 1;
             border-radius: 4px;
             flex: none;
@@ -1427,10 +2627,11 @@
             width: 282px
         }
 
-        .framer-qPhhA .framer-1iy253f,
-        .framer-qPhhA .framer-9nn44o,
-        .framer-qPhhA .framer-aa9iy2,
-        .framer-qPhhA .framer-rxxh6p {
+        .framer-E9c4t .framer-1iy253f,
+        .framer-E9c4t .framer-9nn44o,
+        .framer-E9c4t .framer-aa9iy2,
+        .framer-E9c4t .framer-rxxh6p,
+        .framer-E9c4t .framer-vxpzc1 {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1446,8 +2647,9 @@
             width: 129px
         }
 
-        .framer-qPhhA .framer-1odgsnk,
-        .framer-qPhhA .framer-m1nboj {
+        .framer-E9c4t .framer-1odgsnk,
+        .framer-E9c4t .framer-m1nboj,
+        .framer-E9c4t .framer-bos5l5 {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1458,7 +2660,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-o0t1n4 {
+        .framer-E9c4t .framer-o0t1n4 {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1469,7 +2671,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-1nee0pv {
+        .framer-E9c4t .framer-1nee0pv {
             align-content: flex-start;
             align-items: flex-start;
             background: linear-gradient(359deg, #730909 0%, rgb(0, 0, 0) 47%);
@@ -1487,7 +2689,7 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1bzp246 {
+        .framer-E9c4t .framer-1bzp246 {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1498,7 +2700,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-xnre2x {
+        .framer-E9c4t .framer-xnre2x {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1509,7 +2711,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-yi8wwe {
+        .framer-E9c4t .framer-yi8wwe {
             align-content: flex-start;
             align-items: flex-start;
             background: linear-gradient(0deg, #730909 0%, rgb(0, 0, 0) 47%);
@@ -1527,7 +2729,8 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-2cldj0 {
+        .framer-E9c4t .framer-2cldj0,
+        .framer-E9c4t .framer-12ur2vg {
             aspect-ratio: 1 / 1;
             border-radius: 4px;
             flex: none;
@@ -1536,7 +2739,36 @@
             width: 282px
         }
 
-        .framer-qPhhA .framer-t3igkx {
+        .framer-E9c4t .framer-n3o774 {
+            align-content: flex-start;
+            align-items: flex-start;
+            background: linear-gradient(0deg, #730909 0%, rgb(0, 0, 0) 47%);
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 14px;
+            height: 524px;
+            justify-content: flex-start;
+            overflow: visible;
+            padding: 18.631099700927734px;
+            position: relative;
+            text-decoration: none;
+            width: 319px
+        }
+
+        .framer-E9c4t .framer-bjexpe {
+            aspect-ratio: 1 / 1;
+            flex: none;
+            height: var(--framer-aspect-ratio-supported, 281px);
+            left: 0;
+            overflow: visible;
+            position: absolute;
+            right: 0;
+            top: 0
+        }
+
+        .framer-E9c4t .framer-t3igkx {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1555,7 +2787,7 @@
             width: 1354px
         }
 
-        .framer-qPhhA .framer-1v8rrah {
+        .framer-E9c4t .framer-1v8rrah {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1573,14 +2805,14 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1ozj4fr-container {
+        .framer-E9c4t .framer-1ozj4fr-container {
             flex: none;
             height: 400px;
             position: relative;
             width: 1405px
         }
 
-        .framer-qPhhA .framer-1ki5xci {
+        .framer-E9c4t .framer-1ki5xci {
             align-content: flex-start;
             align-items: flex-start;
             background-color: #141414;
@@ -1596,7 +2828,7 @@
             width: 100%
         }
 
-        .framer-qPhhA .framer-8kg9xd {
+        .framer-E9c4t .framer-8kg9xd {
             align-content: flex-start;
             align-items: flex-start;
             display: flex;
@@ -1611,7 +2843,7 @@
             width: 100%
         }
 
-        .framer-qPhhA .framer-1gjarul {
+        .framer-E9c4t .framer-1gjarul {
             align-content: center;
             align-items: center;
             display: flex;
@@ -1626,7 +2858,7 @@
             width: 100%
         }
 
-        .framer-qPhhA .framer-1d9xezt {
+        .framer-E9c4t .framer-1d9xezt {
             aspect-ratio: 6.15625 / 1;
             flex: none;
             height: var(--framer-aspect-ratio-supported, 64px);
@@ -1635,7 +2867,7 @@
             width: 394px
         }
 
-        .framer-qPhhA .framer-105wic5 {
+        .framer-E9c4t .framer-105wic5 {
             align-content: center;
             align-items: center;
             display: flex;
@@ -1651,7 +2883,7 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-10mywfm {
+        .framer-E9c4t .framer-10mywfm {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1662,7 +2894,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-1f157zf {
+        .framer-E9c4t .framer-1f157zf {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1673,7 +2905,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-1uwafqw {
+        .framer-E9c4t .framer-1uwafqw {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1684,7 +2916,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-13e7hin {
+        .framer-E9c4t .framer-13e7hin {
             --framer-paragraph-spacing: 0px;
             flex: none;
             height: auto;
@@ -1695,7 +2927,7 @@
             word-wrap: break-word
         }
 
-        .framer-qPhhA .framer-uuw11x {
+        .framer-E9c4t .framer-uuw11x {
             align-content: center;
             align-items: center;
             display: flex;
@@ -1711,10 +2943,10 @@
             width: min-content
         }
 
-        .framer-qPhhA .framer-1nhntfg,
-        .framer-qPhhA .framer-qjtnkw,
-        .framer-qPhhA .framer-1tsx4w7,
-        .framer-qPhhA .framer-dnglnd {
+        .framer-E9c4t .framer-1nhntfg,
+        .framer-E9c4t .framer-qjtnkw,
+        .framer-E9c4t .framer-1tsx4w7,
+        .framer-E9c4t .framer-dnglnd {
             aspect-ratio: 1 / 1;
             flex: none;
             height: var(--framer-aspect-ratio-supported, 42px);
@@ -1724,132 +2956,142 @@
         }
 
         @supports (background: -webkit-named-image(i)) and (not (scale:1)) {
-            .framer-qPhhA.framer-72rtr7,
-            .framer-qPhhA .framer-1lpriuj,
-            .framer-qPhhA .framer-bf6xrg,
-            .framer-qPhhA .framer-186zabs,
-            .framer-qPhhA .framer-1gejnlh,
-            .framer-qPhhA .framer-pt33d3,
-            .framer-qPhhA .framer-1h6ri1v,
-            .framer-qPhhA .framer-1nj7ywx,
-            .framer-qPhhA .framer-dlk9b0,
-            .framer-qPhhA .framer-10w8ri9,
-            .framer-qPhhA .framer-1iy253f,
-            .framer-qPhhA .framer-1la7ery,
-            .framer-qPhhA .framer-9nn44o,
-            .framer-qPhhA .framer-1nee0pv,
-            .framer-qPhhA .framer-1iuoj5h,
-            .framer-qPhhA .framer-aa9iy2,
-            .framer-qPhhA .framer-yi8wwe,
-            .framer-qPhhA .framer-rxxh6p,
-            .framer-qPhhA .framer-t3igkx,
-            .framer-qPhhA .framer-1v8rrah,
-            .framer-qPhhA .framer-105wic5,
-            .framer-qPhhA .framer-uuw11x {
+            .framer-E9c4t.framer-72rtr7,
+            .framer-E9c4t .framer-1lpriuj,
+            .framer-E9c4t .framer-bf6xrg,
+            .framer-E9c4t .framer-186zabs,
+            .framer-E9c4t .framer-1gejnlh,
+            .framer-E9c4t .framer-pt33d3,
+            .framer-E9c4t .framer-1h6ri1v,
+            .framer-E9c4t .framer-1nj7ywx,
+            .framer-E9c4t .framer-dlk9b0,
+            .framer-E9c4t .framer-10w8ri9,
+            .framer-E9c4t .framer-1iy253f,
+            .framer-E9c4t .framer-1la7ery,
+            .framer-E9c4t .framer-9nn44o,
+            .framer-E9c4t .framer-1nee0pv,
+            .framer-E9c4t .framer-1iuoj5h,
+            .framer-E9c4t .framer-aa9iy2,
+            .framer-E9c4t .framer-yi8wwe,
+            .framer-E9c4t .framer-rxxh6p,
+            .framer-E9c4t .framer-n3o774,
+            .framer-E9c4t .framer-vxpzc1,
+            .framer-E9c4t .framer-t3igkx,
+            .framer-E9c4t .framer-1v8rrah,
+            .framer-E9c4t .framer-105wic5,
+            .framer-E9c4t .framer-uuw11x {
                 gap: 0px
             }
-            .framer-qPhhA.framer-72rtr7>*,
-            .framer-qPhhA .framer-1lpriuj>* {
+            .framer-E9c4t.framer-72rtr7>*,
+            .framer-E9c4t .framer-1lpriuj>* {
                 margin: 5px 0
             }
-            .framer-qPhhA.framer-72rtr7>:first-child,
-            .framer-qPhhA .framer-1lpriuj>:first-child,
-            .framer-qPhhA .framer-1gejnlh>:first-child,
-            .framer-qPhhA .framer-1h6ri1v>:first-child,
-            .framer-qPhhA .framer-1nj7ywx>:first-child,
-            .framer-qPhhA .framer-10w8ri9>:first-child,
-            .framer-qPhhA .framer-1iy253f>:first-child,
-            .framer-qPhhA .framer-1la7ery>:first-child,
-            .framer-qPhhA .framer-9nn44o>:first-child,
-            .framer-qPhhA .framer-1nee0pv>:first-child,
-            .framer-qPhhA .framer-1iuoj5h>:first-child,
-            .framer-qPhhA .framer-aa9iy2>:first-child,
-            .framer-qPhhA .framer-yi8wwe>:first-child,
-            .framer-qPhhA .framer-rxxh6p>:first-child,
-            .framer-qPhhA .framer-t3igkx>:first-child,
-            .framer-qPhhA .framer-1v8rrah>:first-child {
+            .framer-E9c4t.framer-72rtr7>:first-child,
+            .framer-E9c4t .framer-1lpriuj>:first-child,
+            .framer-E9c4t .framer-1gejnlh>:first-child,
+            .framer-E9c4t .framer-1h6ri1v>:first-child,
+            .framer-E9c4t .framer-1nj7ywx>:first-child,
+            .framer-E9c4t .framer-10w8ri9>:first-child,
+            .framer-E9c4t .framer-1iy253f>:first-child,
+            .framer-E9c4t .framer-1la7ery>:first-child,
+            .framer-E9c4t .framer-9nn44o>:first-child,
+            .framer-E9c4t .framer-1nee0pv>:first-child,
+            .framer-E9c4t .framer-1iuoj5h>:first-child,
+            .framer-E9c4t .framer-aa9iy2>:first-child,
+            .framer-E9c4t .framer-yi8wwe>:first-child,
+            .framer-E9c4t .framer-rxxh6p>:first-child,
+            .framer-E9c4t .framer-n3o774>:first-child,
+            .framer-E9c4t .framer-vxpzc1>:first-child,
+            .framer-E9c4t .framer-t3igkx>:first-child,
+            .framer-E9c4t .framer-1v8rrah>:first-child {
                 margin-top: 0
             }
-            .framer-qPhhA.framer-72rtr7>:last-child,
-            .framer-qPhhA .framer-1lpriuj>:last-child,
-            .framer-qPhhA .framer-1gejnlh>:last-child,
-            .framer-qPhhA .framer-1h6ri1v>:last-child,
-            .framer-qPhhA .framer-1nj7ywx>:last-child,
-            .framer-qPhhA .framer-10w8ri9>:last-child,
-            .framer-qPhhA .framer-1iy253f>:last-child,
-            .framer-qPhhA .framer-1la7ery>:last-child,
-            .framer-qPhhA .framer-9nn44o>:last-child,
-            .framer-qPhhA .framer-1nee0pv>:last-child,
-            .framer-qPhhA .framer-1iuoj5h>:last-child,
-            .framer-qPhhA .framer-aa9iy2>:last-child,
-            .framer-qPhhA .framer-yi8wwe>:last-child,
-            .framer-qPhhA .framer-rxxh6p>:last-child,
-            .framer-qPhhA .framer-t3igkx>:last-child,
-            .framer-qPhhA .framer-1v8rrah>:last-child {
+            .framer-E9c4t.framer-72rtr7>:last-child,
+            .framer-E9c4t .framer-1lpriuj>:last-child,
+            .framer-E9c4t .framer-1gejnlh>:last-child,
+            .framer-E9c4t .framer-1h6ri1v>:last-child,
+            .framer-E9c4t .framer-1nj7ywx>:last-child,
+            .framer-E9c4t .framer-10w8ri9>:last-child,
+            .framer-E9c4t .framer-1iy253f>:last-child,
+            .framer-E9c4t .framer-1la7ery>:last-child,
+            .framer-E9c4t .framer-9nn44o>:last-child,
+            .framer-E9c4t .framer-1nee0pv>:last-child,
+            .framer-E9c4t .framer-1iuoj5h>:last-child,
+            .framer-E9c4t .framer-aa9iy2>:last-child,
+            .framer-E9c4t .framer-yi8wwe>:last-child,
+            .framer-E9c4t .framer-rxxh6p>:last-child,
+            .framer-E9c4t .framer-n3o774>:last-child,
+            .framer-E9c4t .framer-vxpzc1>:last-child,
+            .framer-E9c4t .framer-t3igkx>:last-child,
+            .framer-E9c4t .framer-1v8rrah>:last-child {
                 margin-bottom: 0
             }
-            .framer-qPhhA .framer-bf6xrg>* {
+            .framer-E9c4t .framer-bf6xrg>* {
                 margin: 0 37.5px
             }
-            .framer-qPhhA .framer-bf6xrg>:first-child,
-            .framer-qPhhA .framer-186zabs>:first-child,
-            .framer-qPhhA .framer-pt33d3>:first-child,
-            .framer-qPhhA .framer-dlk9b0>:first-child,
-            .framer-qPhhA .framer-105wic5>:first-child,
-            .framer-qPhhA .framer-uuw11x>:first-child {
+            .framer-E9c4t .framer-bf6xrg>:first-child,
+            .framer-E9c4t .framer-186zabs>:first-child,
+            .framer-E9c4t .framer-pt33d3>:first-child,
+            .framer-E9c4t .framer-dlk9b0>:first-child,
+            .framer-E9c4t .framer-105wic5>:first-child,
+            .framer-E9c4t .framer-uuw11x>:first-child {
                 margin-left: 0
             }
-            .framer-qPhhA .framer-bf6xrg>:last-child,
-            .framer-qPhhA .framer-186zabs>:last-child,
-            .framer-qPhhA .framer-pt33d3>:last-child,
-            .framer-qPhhA .framer-dlk9b0>:last-child,
-            .framer-qPhhA .framer-105wic5>:last-child,
-            .framer-qPhhA .framer-uuw11x>:last-child {
+            .framer-E9c4t .framer-bf6xrg>:last-child,
+            .framer-E9c4t .framer-186zabs>:last-child,
+            .framer-E9c4t .framer-pt33d3>:last-child,
+            .framer-E9c4t .framer-dlk9b0>:last-child,
+            .framer-E9c4t .framer-105wic5>:last-child,
+            .framer-E9c4t .framer-uuw11x>:last-child {
                 margin-right: 0
             }
-            .framer-qPhhA .framer-186zabs>* {
+            .framer-E9c4t .framer-186zabs>* {
                 margin: 0;
                 margin-left: calc(4.146919250488281px / 2);
                 margin-right: calc(4.146919250488281px / 2)
             }
-            .framer-qPhhA .framer-1gejnlh>*,
-            .framer-qPhhA .framer-1iy253f>*,
-            .framer-qPhhA .framer-9nn44o>*,
-            .framer-qPhhA .framer-aa9iy2>*,
-            .framer-qPhhA .framer-rxxh6p>* {
+            .framer-E9c4t .framer-1gejnlh>*,
+            .framer-E9c4t .framer-1iy253f>*,
+            .framer-E9c4t .framer-9nn44o>*,
+            .framer-E9c4t .framer-aa9iy2>*,
+            .framer-E9c4t .framer-rxxh6p>*,
+            .framer-E9c4t .framer-vxpzc1>* {
                 margin: 0
             }
-            .framer-qPhhA .framer-pt33d3>* {
+            .framer-E9c4t .framer-pt33d3>* {
                 margin: 0 5px
             }
-            .framer-qPhhA .framer-1h6ri1v>*,
-            .framer-qPhhA .framer-t3igkx>* {
+            .framer-E9c4t .framer-1h6ri1v>*,
+            .framer-E9c4t .framer-t3igkx>* {
                 margin: 12.5px 0
             }
-            .framer-qPhhA .framer-1nj7ywx>* {
+            .framer-E9c4t .framer-1nj7ywx>* {
                 margin: -28.5px 0
             }
-            .framer-qPhhA .framer-dlk9b0>* {
+            .framer-E9c4t .framer-dlk9b0>* {
                 margin: 0;
                 margin-left: calc(26.083539962768555px / 2);
                 margin-right: calc(26.083539962768555px / 2)
             }
-            .framer-qPhhA .framer-10w8ri9>*,
-            .framer-qPhhA .framer-1la7ery>*,
-            .framer-qPhhA .framer-1nee0pv>*,
-            .framer-qPhhA .framer-1iuoj5h>*,
-            .framer-qPhhA .framer-yi8wwe>* {
+            .framer-E9c4t .framer-10w8ri9>*,
+            .framer-E9c4t .framer-1la7ery>*,
+            .framer-E9c4t .framer-1nee0pv>*,
+            .framer-E9c4t .framer-1iuoj5h>*,
+            .framer-E9c4t .framer-yi8wwe>* {
                 margin: 0;
                 margin-bottom: calc(7.45244026184082px / 2);
                 margin-top: calc(7.45244026184082px / 2)
             }
-            .framer-qPhhA .framer-1v8rrah>* {
+            .framer-E9c4t .framer-n3o774>* {
+                margin: 7px 0
+            }
+            .framer-E9c4t .framer-1v8rrah>* {
                 margin: -14.5px 0
             }
-            .framer-qPhhA .framer-105wic5>* {
+            .framer-E9c4t .framer-105wic5>* {
                 margin: 0 30px
             }
-            .framer-qPhhA .framer-uuw11x>* {
+            .framer-E9c4t .framer-uuw11x>* {
                 margin: 0 11.5px
             }
         }
@@ -1879,220 +3121,253 @@
     <!-- End of headEnd -->
 </head>
 
-<body class="framer-body-augiA20Il-framer-qPhhA">
+<body class="framer-body-augiA20Il-framer-E9c4t">
     <script async src="https://events.framer.com/script" data-fid="14845e722a0244cebe6d209820f81a47ba0303d9608df55d6812d71092e60ee2"></script>
     <!-- Start of bodyStart -->
     <div id="container">
         <netflixintro letter="X">
             <div class="helper-1">
-              <div class="effect-brush">
-                <span class="fur-31"></span>
-                <span class="fur-30"></span>
-                <span class="fur-29"></span>
-                <span class="fur-28"></span>
-                <span class="fur-27"></span>
-                <span class="fur-26"></span>
-                <span class="fur-25"></span>
-                <span class="fur-24"></span>
-                <span class="fur-23"></span>
-                <span class="fur-22"></span>
-                <span class="fur-21"></span>
-                <span class="fur-20"></span>
-                <span class="fur-19"></span>
-                <span class="fur-18"></span>
-                <span class="fur-17"></span>
-                <span class="fur-16"></span>
-                <span class="fur-15"></span>
-                <span class="fur-14"></span>
-                <span class="fur-13"></span>
-                <span class="fur-12"></span>
-                <span class="fur-11"></span>
-                <span class="fur-10"></span>
-                <span class="fur-9"></span>
-                <span class="fur-8"></span>
-                <span class="fur-7"></span>
-                <span class="fur-6"></span>
-                <span class="fur-5"></span>
-                <span class="fur-4"></span>
-                <span class="fur-3"></span>
-                <span class="fur-2"></span>
-                <span class="fur-1"></span>
-              </div>
-              <div class="effect-lumieres">
-                <span class="lamp-1"></span>
-                <span class="lamp-2"></span>
-                <span class="lamp-3"></span>
-                <span class="lamp-4"></span>
-                <span class="lamp-5"></span>
-                <span class="lamp-6"></span>
-                <span class="lamp-7"></span>
-                <span class="lamp-8"></span>
-                <span class="lamp-9"></span>
-                <span class="lamp-10"></span>
-                <span class="lamp-11"></span>
-                <span class="lamp-12"></span>
-                <span class="lamp-13"></span>
-                <span class="lamp-14"></span>
-                <span class="lamp-15"></span>
-                <span class="lamp-16"></span>
-                <span class="lamp-17"></span>
-                <span class="lamp-18"></span>
-                <span class="lamp-19"></span>
-                <span class="lamp-20"></span>
-                <span class="lamp-21"></span>
-                <span class="lamp-22"></span>
-                <span class="lamp-23"></span>
-                <span class="lamp-24"></span>
-                <span class="lamp-25"></span>
-                <span class="lamp-26"></span>
-                <span class="lamp-27"></span>
-                <span class="lamp-28"></span>
-              </div>
+                <div class="effect-brush">
+                    <span class="fur-31"></span>
+                    <span class="fur-30"></span>
+                    <span class="fur-29"></span>
+                    <span class="fur-28"></span>
+                    <span class="fur-27"></span>
+                    <span class="fur-26"></span>
+                    <span class="fur-25"></span>
+                    <span class="fur-24"></span>
+                    <span class="fur-23"></span>
+                    <span class="fur-22"></span>
+                    <span class="fur-21"></span>
+                    <span class="fur-20"></span>
+                    <span class="fur-19"></span>
+                    <span class="fur-18"></span>
+                    <span class="fur-17"></span>
+                    <span class="fur-16"></span>
+                    <span class="fur-15"></span>
+                    <span class="fur-14"></span>
+                    <span class="fur-13"></span>
+                    <span class="fur-12"></span>
+                    <span class="fur-11"></span>
+                    <span class="fur-10"></span>
+                    <span class="fur-9"></span>
+                    <span class="fur-8"></span>
+                    <span class="fur-7"></span>
+                    <span class="fur-6"></span>
+                    <span class="fur-5"></span>
+                    <span class="fur-4"></span>
+                    <span class="fur-3"></span>
+                    <span class="fur-2"></span>
+                    <span class="fur-1"></span>
+                </div>
+                <div class="effect-lumieres">
+                    <span class="lamp-1"></span>
+                    <span class="lamp-2"></span>
+                    <span class="lamp-3"></span>
+                    <span class="lamp-4"></span>
+                    <span class="lamp-5"></span>
+                    <span class="lamp-6"></span>
+                    <span class="lamp-7"></span>
+                    <span class="lamp-8"></span>
+                    <span class="lamp-9"></span>
+                    <span class="lamp-10"></span>
+                    <span class="lamp-11"></span>
+                    <span class="lamp-12"></span>
+                    <span class="lamp-13"></span>
+                    <span class="lamp-14"></span>
+                    <span class="lamp-15"></span>
+                    <span class="lamp-16"></span>
+                    <span class="lamp-17"></span>
+                    <span class="lamp-18"></span>
+                    <span class="lamp-19"></span>
+                    <span class="lamp-20"></span>
+                    <span class="lamp-21"></span>
+                    <span class="lamp-22"></span>
+                    <span class="lamp-23"></span>
+                    <span class="lamp-24"></span>
+                    <span class="lamp-25"></span>
+                    <span class="lamp-26"></span>
+                    <span class="lamp-27"></span>
+                    <span class="lamp-28"></span>
+                </div>
             </div>
             <div class="helper-2">
-              <div class="effect-brush">
-                <span class="fur-31"></span>
-                <span class="fur-30"></span>
-                <span class="fur-29"></span>
-                <span class="fur-28"></span>
-                <span class="fur-27"></span>
-                <span class="fur-26"></span>
-                <span class="fur-25"></span>
-                <span class="fur-24"></span>
-                <span class="fur-23"></span>
-                <span class="fur-22"></span>
-                <span class="fur-21"></span>
-                <span class="fur-20"></span>
-                <span class="fur-19"></span>
-                <span class="fur-18"></span>
-                <span class="fur-17"></span>
-                <span class="fur-16"></span>
-                <span class="fur-15"></span>
-                <span class="fur-14"></span>
-                <span class="fur-13"></span>
-                <span class="fur-12"></span>
-                <span class="fur-11"></span>
-                <span class="fur-10"></span>
-                <span class="fur-9"></span>
-                <span class="fur-8"></span>
-                <span class="fur-7"></span>
-                <span class="fur-6"></span>
-                <span class="fur-5"></span>
-                <span class="fur-4"></span>
-                <span class="fur-3"></span>
-                <span class="fur-2"></span>
-                <span class="fur-1"></span>
-              </div>
+                <div class="effect-brush">
+                    <span class="fur-31"></span>
+                    <span class="fur-30"></span>
+                    <span class="fur-29"></span>
+                    <span class="fur-28"></span>
+                    <span class="fur-27"></span>
+                    <span class="fur-26"></span>
+                    <span class="fur-25"></span>
+                    <span class="fur-24"></span>
+                    <span class="fur-23"></span>
+                    <span class="fur-22"></span>
+                    <span class="fur-21"></span>
+                    <span class="fur-20"></span>
+                    <span class="fur-19"></span>
+                    <span class="fur-18"></span>
+                    <span class="fur-17"></span>
+                    <span class="fur-16"></span>
+                    <span class="fur-15"></span>
+                    <span class="fur-14"></span>
+                    <span class="fur-13"></span>
+                    <span class="fur-12"></span>
+                    <span class="fur-11"></span>
+                    <span class="fur-10"></span>
+                    <span class="fur-9"></span>
+                    <span class="fur-8"></span>
+                    <span class="fur-7"></span>
+                    <span class="fur-6"></span>
+                    <span class="fur-5"></span>
+                    <span class="fur-4"></span>
+                    <span class="fur-3"></span>
+                    <span class="fur-2"></span>
+                    <span class="fur-1"></span>
+                </div>
             </div>
             <div class="helper-3">
-              <div class="effect-brush">
-                <span class="fur-31"></span>
-                <span class="fur-30"></span>
-                <span class="fur-29"></span>
-                <span class="fur-28"></span>
-                <span class="fur-27"></span>
-                <span class="fur-26"></span>
-                <span class="fur-25"></span>
-                <span class="fur-24"></span>
-                <span class="fur-23"></span>
-                <span class="fur-22"></span>
-                <span class="fur-21"></span>
-                <span class="fur-20"></span>
-                <span class="fur-19"></span>
-                <span class="fur-18"></span>
-                <span class="fur-17"></span>
-                <span class="fur-16"></span>
-                <span class="fur-15"></span>
-                <span class="fur-14"></span>
-                <span class="fur-13"></span>
-                <span class="fur-12"></span>
-                <span class="fur-11"></span>
-                <span class="fur-10"></span>
-                <span class="fur-9"></span>
-                <span class="fur-8"></span>
-                <span class="fur-7"></span>
-                <span class="fur-6"></span>
-                <span class="fur-5"></span>
-                <span class="fur-4"></span>
-                <span class="fur-3"></span>
-                <span class="fur-2"></span>
-                <span class="fur-1"></span>
-              </div>
+                <div class="effect-brush">
+                    <span class="fur-31"></span>
+                    <span class="fur-30"></span>
+                    <span class="fur-29"></span>
+                    <span class="fur-28"></span>
+                    <span class="fur-27"></span>
+                    <span class="fur-26"></span>
+                    <span class="fur-25"></span>
+                    <span class="fur-24"></span>
+                    <span class="fur-23"></span>
+                    <span class="fur-22"></span>
+                    <span class="fur-21"></span>
+                    <span class="fur-20"></span>
+                    <span class="fur-19"></span>
+                    <span class="fur-18"></span>
+                    <span class="fur-17"></span>
+                    <span class="fur-16"></span>
+                    <span class="fur-15"></span>
+                    <span class="fur-14"></span>
+                    <span class="fur-13"></span>
+                    <span class="fur-12"></span>
+                    <span class="fur-11"></span>
+                    <span class="fur-10"></span>
+                    <span class="fur-9"></span>
+                    <span class="fur-8"></span>
+                    <span class="fur-7"></span>
+                    <span class="fur-6"></span>
+                    <span class="fur-5"></span>
+                    <span class="fur-4"></span>
+                    <span class="fur-3"></span>
+                    <span class="fur-2"></span>
+                    <span class="fur-1"></span>
+                </div>
             </div>
             <div class="helper-4">
-              <div class="effect-brush">
-                <span class="fur-31"></span>
-                <span class="fur-30"></span>
-                <span class="fur-29"></span>
-                <span class="fur-28"></span>
-                <span class="fur-27"></span>
-                <span class="fur-26"></span>
-                <span class="fur-25"></span>
-                <span class="fur-24"></span>
-                <span class="fur-23"></span>
-                <span class="fur-22"></span>
-                <span class="fur-21"></span>
-                <span class="fur-20"></span>
-                <span class="fur-19"></span>
-                <span class="fur-18"></span>
-                <span class="fur-17"></span>
-                <span class="fur-16"></span>
-                <span class="fur-15"></span>
-                <span class="fur-14"></span>
-                <span class="fur-13"></span>
-                <span class="fur-12"></span>
-                <span class="fur-11"></span>
-                <span class="fur-10"></span>
-                <span class="fur-9"></span>
-                <span class="fur-8"></span>
-                <span class="fur-7"></span>
-                <span class="fur-6"></span>
-                <span class="fur-5"></span>
-                <span class="fur-4"></span>
-                <span class="fur-3"></span>
-                <span class="fur-2"></span>
-                <span class="fur-1"></span>
-              </div>
+                <div class="effect-brush">
+                    <span class="fur-31"></span>
+                    <span class="fur-30"></span>
+                    <span class="fur-29"></span>
+                    <span class="fur-28"></span>
+                    <span class="fur-27"></span>
+                    <span class="fur-26"></span>
+                    <span class="fur-25"></span>
+                    <span class="fur-24"></span>
+                    <span class="fur-23"></span>
+                    <span class="fur-22"></span>
+                    <span class="fur-21"></span>
+                    <span class="fur-20"></span>
+                    <span class="fur-19"></span>
+                    <span class="fur-18"></span>
+                    <span class="fur-17"></span>
+                    <span class="fur-16"></span>
+                    <span class="fur-15"></span>
+                    <span class="fur-14"></span>
+                    <span class="fur-13"></span>
+                    <span class="fur-12"></span>
+                    <span class="fur-11"></span>
+                    <span class="fur-10"></span>
+                    <span class="fur-9"></span>
+                    <span class="fur-8"></span>
+                    <span class="fur-7"></span>
+                    <span class="fur-6"></span>
+                    <span class="fur-5"></span>
+                    <span class="fur-4"></span>
+                    <span class="fur-3"></span>
+                    <span class="fur-2"></span>
+                    <span class="fur-1"></span>
+                </div>
             </div>
         </netflixintro>
     </div>
+    <script>
+        // Your JavaScript Code
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate loading time with a timeout
+            setTimeout(function() {
+                // Fade out the background color of the loading animation
+                var loadingAnimation = document.getElementById('container');
+                loadingAnimation.style.backgroundColor = 'transparent'; // Change background color to transparent
+                loadingAnimation.style.opacity = 0; // Fade out opacity as well
+
+                // After the transition ends, hide the loading animation
+                loadingAnimation.addEventListener('transitionend', function() {
+                    loadingAnimation.style.display = 'none'; // Hide the loader
+                }, {
+                    once: true
+                }); // Ensure the event listener is invoked only once
+            }, 3500); // Fade out background color after 3500ms
+        });
+    </script>
+
     <!-- End of bodyStart -->
-    <div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;72rtr7&quot;}]}" data-framer-ssr-released-at="2024-08-29T11:54:28.163Z" data-framer-page-optimized-at="2024-09-10T09:28:14.075Z">
+    <div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;72rtr7&quot;}]}" data-framer-ssr-released-at="2024-10-11T09:23:29.153Z" data-framer-page-optimized-at="2024-10-15T18:13:11.182Z">
         <!--$-->
-        <div class="framer-qPhhA framer-xDFqQ framer-7ZlfK framer-72rtr7" style="min-height:100vh;width:auto">
+        <div class="framer-E9c4t framer-xDFqQ framer-7ZlfK framer-72rtr7" style="min-height:100vh;width:auto">
             <div class="framer-s48gip" data-framer-name="Desktop - 22" name="Desktop - 22">
                 <div class="framer-v9kcid" data-framer-name="Rectangle 103" name="Rectangle 103">
                     <div data-framer-component-type="SVG" data-framer-name="Group 2198190" name="Group 2198190" style="image-rendering:pixelated;flex-shrink:0;background-size:100% 100%;background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%202712%201850%22%3E%3Cpath%20d%3D%22M%200.942%200%20L%200.942%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20987.808%200%20L%20987.808%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20123.358%200%20L%20123.358%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201110.225%200%20L%201110.225%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201972.792%200%20L%201972.792%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20247.658%200%20L%20247.658%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201234.525%200%20L%201234.525%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%202097.092%200%20L%202097.092%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20370.075%200%20L%20370.075%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201356.942%200%20L%201356.942%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%202219.509%200%20L%202219.509%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20494.375%200%20L%20494.375%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201479.358%200%20L%201479.358%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%202343.808%200%20L%202343.808%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20616.792%200%20L%20616.792%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201603.658%200%20L%201603.658%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%202466.225%200%20L%202466.225%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20741.092%200%20L%20741.092%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201726.075%200%20L%201726.075%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%202590.525%200%20L%202590.525%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%20863.508%200%20L%20863.508%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%201850.375%200%20L%201850.375%201850%22%20fill%3D%22transparent%22%20stroke-width%3D%221.92%22%20stroke%3D%22rgb(38%2C24%2C24)%22%20stroke-miterlimit%3D%2210%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E')"
-                        class="framer-16336j9"></div>
+                        class="framer-16336j9" aria-hidden="true"></div>
                     <div class="framer-rkm4ed" data-framer-name="logo-white 3" name="logo-white 3">
                         <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" sizes="calc((100vw + 229px) * 0.4979)" srcset="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=512 512w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=2048 2048w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png 2291w"
-                                src="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto"></div>
+                                src="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                     </div>
                     <div class="framer-1lpriuj">
                         <div class="framer-1jc4itk" data-framer-name="nav bar" name="nav bar">
+                            <!--$-->
                             <a class="framer-m9l3hl framer-lux5qc" data-framer-name="logo-white 1" name="logo-white 1" href="./" data-framer-page-link-current="true">
                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" sizes="334px" srcset="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=512 512w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png?scale-down-to=2048 2048w,https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png 2291w"
-                                        src="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto"></div>
+                                        src="https://framerusercontent.com/images/az8Eg9HWCzWDw1ms0FRQbejWSA.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                             </a>
+                            <!--/$-->
                             <div class="framer-bf6xrg" data-framer-name="Frame 60" name="Frame 60">
                                 <div class="framer-1v6o7fb" data-framer-name="Home" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
                                     <p style="--font-selector:R0Y7RE0gU2Fucy1yZWd1bGFy;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
-                                        class="framer-text"><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./" data-framer-page-link-current="true">Home</a></p>
+                                        class="framer-text">
+                                        <!--$--><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./" data-framer-page-link-current="true">Home</a>
+                                        <!--/$-->
+                                    </p>
                                 </div>
                                 <div class="framer-12bliwu" data-framer-name="Speakers" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
                                     <p style="--font-selector:R0Y7RE0gU2Fucy1yZWd1bGFy;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(139, 139, 139)"
-                                        class="framer-text"><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./speakers">Speakers</a></p>
+                                        class="framer-text">
+                                        <!--$--><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./speakers">Speakers</a>
+                                        <!--/$-->
+                                    </p>
                                 </div>
                                 <div class="framer-1db166z" data-framer-name="About Us" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
                                     <p style="--font-selector:R0Y7RE0gU2Fucy1yZWd1bGFy;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(139, 139, 139)"
-                                        class="framer-text"><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./about-us">About Us</a></p>
+                                        class="framer-text">
+                                        <!--$--><a class="framer-text framer-styles-preset-1bc1x3e" data-styles-preset="Y9ck8ETQo" href="./about-us">About Us</a>
+                                        <!--/$-->
+                                    </p>
                                 </div>
-                                <a class="framer-186zabs framer-lux5qc" data-framer-name="Frame 59" name="Frame 59" href="https://forms.gle/YGJFnUMtEn9fav97A" target="_blank" rel="noopener">
+                                <!--$-->
+                                <a class="framer-186zabs framer-lux5qc" data-framer-name="Frame 59" name="Frame 59">
                                     <div class="framer-1e5f7im" data-framer-name="REGISTER" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
                                         <p style="--font-selector:R0Y7RE0gU2Fucy05MDA=;--framer-font-family:&quot;DM Sans&quot;, sans-serif;--framer-font-size:16.59px;--framer-font-weight:900;--framer-letter-spacing:0px;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
                                             class="framer-text">REGISTER</p>
                                     </div>
                                 </a>
+                                <!--/$-->
                             </div>
                         </div>
                     </div>
@@ -2119,11 +3394,13 @@
                     <div class="framer-w8nw9d" data-framer-name="Secure Your Spot Today! Register Now!" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:translateX(-50%)" data-framer-component-type="RichTextContainer">
                         <p style="--framer-font-size:48px;--framer-line-height:150%;--framer-text-alignment:center" class="framer-text"><span style="--font-selector:R0Y7RE0gU2Fucy05MDA=;--framer-font-family:&quot;DM Sans&quot;;--framer-font-size:48px;--framer-font-weight:900;--framer-letter-spacing:0px;--framer-text-color:rgba(255, 255, 255, 1)" class="framer-text">Secure Your Spot Today! Register Now!</span></p>
                     </div>
+                    <!--$-->
                     <a class="framer-pt33d3 framer-lux5qc" data-framer-name="Frame 59" name="Frame 59">
                         <div class="framer-i1z1f2" data-framer-name="REGISTER" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
                             <p style="--framer-font-size:40px;--framer-line-height:150%;--framer-text-alignment:center" class="framer-text"><span style="--font-selector:R0Y7RE0gU2Fucy05MDA=;--framer-font-family:&quot;DM Sans&quot;;--framer-font-size:40px;--framer-font-weight:900;--framer-letter-spacing:0px;--framer-text-color:rgba(255, 255, 255, 1)" class="framer-text">REGISTER</span></p>
                         </div>
                     </a>
+                    <!--/$-->
                     <div class="framer-1e2ozq3" data-framer-name="x = independently organized TED event" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:translateX(-50%)" data-framer-component-type="RichTextContainer">
                         <p style="--framer-font-size:47.27009582519531px;--framer-line-height:150%;--framer-text-alignment:center" class="framer-text"><span style="--font-selector:R0Y7RE0gU2Fucy03MDA=;--framer-font-family:&quot;DM Sans&quot;;--framer-font-size:47.27px;--framer-font-weight:700;--framer-letter-spacing:-0.01em;--framer-text-color:rgba(235, 1, 38, 1)" class="framer-text">x</span>
                             <span
@@ -2145,7 +3422,8 @@
                             <section style="display:flex;width:100%;height:100%;max-width:100%;max-height:100%;place-items:center;margin:0;padding:10px;list-style-type:none;text-indent:none;opacity:0;-webkit-mask-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);-moz-mask-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);mask-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);overflow:hidden">
                                 <ul style="display:flex;width:100%;height:100%;max-width:100%;max-height:100%;place-items:center;margin:0;padding:0;list-style-type:none;text-indent:none;gap:33px;position:relative;flex-direction:row;will-change:transform;transform:translateX(-0px)">
                                     <li>
-                                        <a class="framer-10w8ri9 framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-10w8ri9 framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-12rd2aw" data-framer-name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash" name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/5JhY9mqfPbSAS0croTPjoKzw3w.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                                             </div>
@@ -2160,9 +3438,11 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        <!--/$-->
                                     </li>
                                     <li>
-                                        <a class="framer-1la7ery framer-lux5qc" data-framer-name="Frame 44" name="Frame 44" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-1la7ery framer-lux5qc" data-framer-name="Frame 44" name="Frame 44" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-11xvzci" data-framer-name="Unsplash-Avatars_0005s_0017_harps-joseph-tAvpDE7fXgY-unsplash" name="Unsplash-Avatars_0005s_0017_harps-joseph-tAvpDE7fXgY-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/ARq4OG8wkpgfE4zkP4aEbaFbUE.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                                             </div>
@@ -2177,9 +3457,11 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        <!--/$-->
                                     </li>
                                     <li>
-                                        <a class="framer-1nee0pv framer-lux5qc" data-framer-name="Frame 45" name="Frame 45" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-1nee0pv framer-lux5qc" data-framer-name="Frame 45" name="Frame 45" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-1ohhlpu" data-framer-name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash" name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/xFWtxjiYMAjffCKDnjSqmGWA.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill"></div>
                                             </div>
@@ -2192,9 +3474,11 @@
                                                     class="framer-text">Vice-President R&amp;D &amp; Strategic Initiatives, Skyroot Aerospace Pvt. Ltd</p>
                                             </div>
                                         </a>
+                                        <!--/$-->
                                     </li>
                                     <li>
-                                        <a class="framer-1iuoj5h framer-lux5qc" data-framer-name="Frame 46" name="Frame 46" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-1iuoj5h framer-lux5qc" data-framer-name="Frame 46" name="Frame 46" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-1igkeye" data-framer-name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash" name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/YDMA6a4ECj7g53mXQPLlwEmm510.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill"></div>
                                             </div>
@@ -2209,9 +3493,11 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        <!--/$-->
                                     </li>
                                     <li>
-                                        <a class="framer-yi8wwe framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-yi8wwe framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-2cldj0" data-framer-name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash" name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/C9XrMkX8w0q1yy17l7GO8Dk1Ak.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                                             </div>
@@ -2228,9 +3514,11 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        <!--/$-->
                                     </li>
                                     <li>
-                                        <a class="framer-n3o774 framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="https://tedx.charusat.ac.in/speakers">
+                                        <!--$-->
+                                        <a class="framer-n3o774 framer-lux5qc" data-framer-name="Frame 43" name="Frame 43" style="flex-shrink:0" href="./speakers">
                                             <div class="framer-12ur2vg" data-framer-name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash" name="Unsplash-Avatars_0005s_0031_wesley-tingey-TvPCUHten1o-unsplash">
                                                 <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" src="https://framerusercontent.com/images/5JhY9mqfPbSAS0croTPjoKzw3w.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
                                                 <div
@@ -2249,86 +3537,108 @@
                             </div>
                         </div>
                         </a>
+                        <!--/$-->
                         </li>
                         </ul>
                         </section>
                     </div>
                 </div>
             </div>
-                <div class="framer-t3igkx" data-framer-name="Speakers" name="Speakers">
-                    <div class="framer-1v8rrah" data-framer-name="Frame 56" name="Frame 56"></div>
-                </div>
+            <div class="framer-t3igkx" data-framer-name="Speakers" name="Speakers">
+                <div class="framer-1v8rrah" data-framer-name="Frame 56" name="Frame 56"></div>
             </div>
-            <div class="framer-1ozj4fr-container">
-                <div style="height:100%;width:100%;position:relative;display:flex;justify-content:center;align-items:center;overflow:hidden;border-radius:0px" height="100%" id="kDzB38X9H" width="100%"><iframe style="height:100%;width:100%;border:0" src="https://maps.google.com/maps?q=22.599160620493286,72.82323761550066&amp;z=15&amp;output=embed"></iframe></div>
-            </div>
-            <div class="framer-1ki5xci" data-framer-name="Frame 76" name="Frame 76">
-                <div class="framer-8kg9xd" data-framer-name="Frame 75" name="Frame 75">
-                    <div class="framer-1gjarul" data-framer-name="Frame 74" name="Frame 74">
-                        <a class="framer-1d9xezt framer-lux5qc" data-framer-name="logo-white 1" name="logo-white 1" href="./" data-framer-page-link-current="true">
-                            <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" sizes="394px" srcset="https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png?scale-down-to=512 512w,https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png 1576w"
-                                    src="https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill;image-rendering:auto"></div>
-                        </a>
-                        <div class="framer-105wic5" data-framer-name="Frame 73" name="Frame 73">
-                            <div class="framer-10mywfm" data-framer-name="About" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
-                                    class="framer-text"><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i" href="./about-us">About</a></p>
-                            </div>
-                            <div class="framer-1f157zf" data-framer-name="Events" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
-                                    class="framer-text"><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i" href="https://www.ted.com/tedx/events/58999" rel="noopener">Events</a></p>
-                            </div>
-                            <div class="framer-1uwafqw" data-framer-name="Speaker" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
-                                    class="framer-text"><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i" href="./speakers">Speaker</a></p>
-                            </div>
-                            <div class="framer-13e7hin" data-framer-name="Charusat" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
-                                    class="framer-text"><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i" href="https://www.charusat.ac.in/" target="_blank" rel="noopener">CHARUSAT</a></p>
-                            </div>
+        </div>
+        <div class="framer-1ozj4fr-container">
+            <div style="height:100%;width:100%;position:relative;display:flex;justify-content:center;align-items:center;overflow:hidden;border-radius:0px" height="100%" id="kDzB38X9H" width="100%"><iframe style="height:100%;width:100%;border:0" src="https://maps.google.com/maps?q=22.599160620493286,72.82323761550066&amp;z=15&amp;output=embed"></iframe></div>
+        </div>
+        <div class="framer-1ki5xci" data-framer-name="Frame 76" name="Frame 76">
+            <div class="framer-8kg9xd" data-framer-name="Frame 75" name="Frame 75">
+                <div class="framer-1gjarul" data-framer-name="Frame 74" name="Frame 74">
+                    <!--$-->
+                    <a class="framer-1d9xezt framer-lux5qc" data-framer-name="logo-white 1" name="logo-white 1" href="./" data-framer-page-link-current="true">
+                        <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" sizes="394px" srcset="https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png?scale-down-to=512 512w,https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png 1576w"
+                                src="https://framerusercontent.com/images/jK9yqokKwYPXHxhFpgL7udpwWG0.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill"></div>
+                    </a>
+                    <!--/$-->
+                    <div class="framer-105wic5" data-framer-name="Frame 73" name="Frame 73">
+                        <div class="framer-10mywfm" data-framer-name="About" id="kmhXO3Pfp" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+                            <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">
+                                <!--$--><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i">About</a>
+                                <!--/$-->
+                            </p>
+                        </div>
+                        <div class="framer-1f157zf" data-framer-name="Events" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+                            <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">
+                                <!--$--><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i">Events</a>
+                                <!--/$-->
+                            </p>
+                        </div>
+                        <div class="framer-1uwafqw" data-framer-name="Speaker" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+                            <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">
+                                <!--$--><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i">Speaker</a>
+                                <!--/$-->
+                            </p>
+                        </div>
+                        <div class="framer-13e7hin" data-framer-name="Charusat" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+                            <p style="--font-selector:R0Y7RE0gU2Fucy01MDA=;--framer-font-family:&quot;DM Sans&quot;, &quot;DM Sans Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-letter-spacing:-0.01em;--framer-line-height:150%;--framer-text-alignment:center;--framer-text-color:rgb(255, 255, 255)"
+                                class="framer-text">
+                                <!--$--><a class="framer-text framer-styles-preset-14kz7so" data-styles-preset="trK5ilC_i">CHARUSAT</a>
+                                <!--/$-->
+                            </p>
                         </div>
                     </div>
-                    <div class="framer-uuw11x" data-framer-name="Frame 72" name="Frame 72">
-                        <a class="framer-1nhntfg framer-lux5qc" data-framer-name="image 26" name="image 26" href="https://www.instagram.com/thecharusat/" target="_blank" rel="noopener">
-                            <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/tTM2hF9NuX2n0mW6jZqWU2yM04w.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto"></div>
-                        </a>
-                        <a class="framer-qjtnkw framer-lux5qc" data-framer-name="image 30" name="image 30" href="https://www.linkedin.com/school/charotar-university-of-science-and-technology/" target="_blank" rel="noopener">
-                            <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/K5e6mAy8YqpmVM5qozvVSXFkaGc.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto"></div>
-                        </a>
-                        <a class="framer-1tsx4w7 framer-lux5qc" data-framer-name="image 31" name="image 31" href="https://youtube.com/@charusatuniversityofficial?si=y4LNkllP0rQ7yetQ" target="_blank" rel="noopener">
-                            <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/0LdvGShzIXJGrC2wMplbKRuFdpk.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover;image-rendering:auto"></div>
-                        </a>
-                        <a class="framer-dnglnd framer-lux5qc" data-framer-name="image 32" name="image 32" href="https://www.facebook.com/thecharusat/" target="_blank" rel="noopener">
-                            <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/bbYVdrvVOp5zC04qOas4Ac1gqo0.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill;image-rendering:auto"></div>
-                        </a>
-                    </div>
+                </div>
+                <div class="framer-uuw11x" data-framer-name="Frame 72" name="Frame 72">
+                    <!--$-->
+                    <a class="framer-1nhntfg framer-lux5qc" data-framer-name="image 26" name="image 26" href="https://www.instagram.com/thecharusat/" target="_blank" rel="noopener">
+                        <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/tTM2hF9NuX2n0mW6jZqWU2yM04w.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
+                    </a>
+                    <!--/$-->
+                    <!--$-->
+                    <a class="framer-qjtnkw framer-lux5qc" data-framer-name="image 30" name="image 30" href="https://www.linkedin.com/school/charotar-university-of-science-and-technology/" target="_blank" rel="noopener">
+                        <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/K5e6mAy8YqpmVM5qozvVSXFkaGc.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
+                    </a>
+                    <!--/$-->
+                    <!--$-->
+                    <a class="framer-1tsx4w7 framer-lux5qc" data-framer-name="image 31" name="image 31" href="https://youtube.com/@charusatuniversityofficial?si=y4LNkllP0rQ7yetQ" target="_blank" rel="noopener">
+                        <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/0LdvGShzIXJGrC2wMplbKRuFdpk.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"></div>
+                    </a>
+                    <!--/$-->
+                    <!--$-->
+                    <a class="framer-dnglnd framer-lux5qc" data-framer-name="image 32" name="image 32" href="https://www.facebook.com/thecharusat/" target="_blank" rel="noopener">
+                        <div style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/bbYVdrvVOp5zC04qOas4Ac1gqo0.png" alt style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:fill"></div>
+                    </a>
+                    <!--/$-->
                 </div>
             </div>
         </div>
-        <div class="framer-qPhhA framer-xDFqQ framer-7ZlfK" id="overlay"></div>
-        <!--/$-->
+    </div>
+    <div class="framer-E9c4t framer-xDFqQ framer-7ZlfK" id="overlay"></div>
+    <!--/$-->
     </div>
     <script>
         (() => {
-            function t() {
+            function i() {
                 for (let e of document.querySelectorAll("[data-framer-original-sizes]")) {
-                    let i = e.getAttribute("data-framer-original-sizes");
-                    i === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", i), e.removeAttribute("data-framer-original-sizes")
+                    let t = e.getAttribute("data-framer-original-sizes");
+                    t === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", t), e.removeAttribute("data-framer-original-sizes")
                 }
             }
 
-            function s() {
-                window.__framer_onRewriteBreakpoints = t
+            function a() {
+                window.__framer_onRewriteBreakpoints = i
             }
-            return s
+            return a
         })()()
     </script>
-    <script src="scripts.js"></script>
 
 
     <script data-framer-appear-animation="no-preference"></script>
-    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/script_main.FJ263S6G.mjs"></script>
-    <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict">
+    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/7tq0CNE7TDXAZK9gTZnIGY/script_main.JYQ7U26R.mjs"></script>
+    <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
         <svg width="172" height="24" viewBox="-6 -6 172 24" fill="none" id="svg866244500_561">
 <path d="M5 11.5V0.5H4.73783C4.45688 0.5 4.17638 0.549958 3.93483 0.693417C3.13275 1.17008 1.33333 2.61613 1.33333 6C1.33333 7.00329 0.904792 8.32238 0.462042 9.41733C0.0724583 10.3803 0.75675 11.5 1.79579 11.5H5ZM155 0.5V11.5H155.262C155.543 11.5 155.824 11.45 156.065 11.3066C156.867 10.8299 158.667 9.38387 158.667 6C158.667 4.99671 159.095 3.67762 159.538 2.58267C159.928 1.61971 159.243 0.5 158.204 0.5H155ZM5 11.5H155V0.5H5V11.5Z" fill="#EB0028"/>
 </svg>
